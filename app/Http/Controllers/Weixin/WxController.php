@@ -34,7 +34,7 @@ class WxController extends Controller
             $Weixin_model=new WxUsermodel();
             $local_user=$Weixin_model->where(['openid'=>$openid])->first();
             if($local_user){
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '欢迎回来 '. $local_user['nickname'] .']]></Content></xml>';
+                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱回来 '. $local_user['nickname'] .']]></Content></xml>';
             }else{
                 //获取用户信息
                 $u=$this ->getUserInfo($openid);
@@ -47,7 +47,7 @@ class WxController extends Controller
                 ];
                 $Weixin_model=new WxUsermodel();
                 $res= $Weixin_model->insert($u_info);
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '欢迎关注 '. $u['nickname'] .']]></Content></xml>';
+                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱关注小杰娃 '. $u['nickname'] .']]></Content></xml>';
             }
         }elseif($type=='voice'){
             $media_id=$data->MediaId;
