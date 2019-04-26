@@ -81,7 +81,12 @@ class MaterialController extends Controller
     {
         $grid = new Grid(new MaterialModel);
 
-
+        $grid->id('Id');
+        $grid->text('Text');
+        $grid->create_time('Create time');
+        $grid->openid('Openid');
+        $grid->img('Img');
+        $grid->voice('Voice');
 
         return $grid;
     }
@@ -96,7 +101,12 @@ class MaterialController extends Controller
     {
         $show = new Show(MaterialModel::findOrFail($id));
 
-
+        $show->id('Id');
+        $show->text('Text');
+        $show->create_time('Create time');
+        $show->openid('Openid');
+        $show->img('Img');
+        $show->voice('Voice');
 
         return $show;
     }
@@ -110,7 +120,11 @@ class MaterialController extends Controller
     {
         $form = new Form(new MaterialModel);
 
-
+        $form->text('text', 'Text');
+        $form->number('create_time', 'Create time');
+        $form->text('openid', 'Openid');
+        $form->image('img', 'Img');
+        $form->text('voice', 'Voice');
 
         return $form;
     }
