@@ -11,5 +11,7 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-
+    Route::resource('/goods',GoodsController::class);
+    Route::resource('/order',OrderController::class);
+    Route::resource('/WxUser',WxUserController::class);
 });

@@ -2,8 +2,174 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ea150b6-35cb-4ef4-afc3-5481b84b5e4d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/2978dd63f0230b9d894a9b2886c4fd0e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/60fc35fa4e77422a3fdc8ecd51972ed8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/73bcf00f6963b0c9f564284566bc21f1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/7a92012f10f890cbf2962928b249e630.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/82b0c19a737fcf81b44e81392cca8249.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/b5617e773d5f3aee619821591b25939a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190119/b68b045c67154802760b90050eccbe82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190120/a4fbdfb61089d255114fe97f00a80f0b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190121/3d1a5aabf8473f5f01b39211fbb197a8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190121/a8c07cf3ea1fed42d7d4801ca6996e1e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190121/c1eb5ead7088f73d32b97870adc17bdb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190121/c57a35f1dbf371c6c06425f3ff051977.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190121/f55fbf6b57297ce268839f810bc1764e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190124/5cf61b56bc5a0c710e608e18fbbfa514.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190124/6c1d7909762e0db865237a70f2b885fa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190124/99bd8a2642963087c0a7673872d8baa1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190124/dfddaff57d4fb70f3a21e824fd6b1e20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/026488a970c12bc02ef1fa2179f5347e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/0bf8ea22e2c6dc39c211645df8732976.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/131a07bffaf76d09cc99dd18472bfdf4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/1f0cdce47da18f57e9cf55f05a9fff65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/2c4128bbe71b08fe237445607bdb69bf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/32fed185e0796523efd4e3162d62b5d0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/496c74881d4b4db4a9aa8197f9fb24df.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190215/6ef10327f72806bd1b4f57cfb5d0f072.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190219/0d9300074bb8a1468a2a221843d34562.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/001259e4bc9165456f7b989934a99d46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/0292f3720e7df555dfd62b1658c2a879.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/04a9df3f9a8017285bae5bcaf696d65c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/0a54c6eabb66092256d8fd008cace119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/0d2da497fc21f6245f5271f4319947c7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1073215b4577a1449cba08bcb5bcbdbd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/115aa6b1d8ac056103af3aca7bda11ed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/162c7f7f028519f86079753abb2ab74c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/189036a47c669251aea7c6ff507bc830.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1911dbd6279f0f077138a538f133cc6c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1cbb1103556eb53f51b97d00642e64a5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1d4eb98d90d3435716e65b0b52449ddb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1fe74642da96f6a86f279aafd5d923c3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/1fe88e0fbe18a3328636a9b2038730d3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/220c2da5ee3ada5c34b6f7c0b88bc138.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/24903a09b27fb0d39632d40bc96f44a1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/25e8603784ecd9efd4215ee2aca885c9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/28eb3c5206c9a3e1ba50a42efdb4e643.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/2a0ebf183cc88e5672d7f8d6e9ceb8f8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/2dcfef13fa0a0616b3788a4335c192e8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/2ea11e5b706631d7e061531fc3577002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/2f629ffe06286f7e6c948727b05b23cc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3137db59c439ad0812328d866d6af893.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/33ba3bc07f5216de57ab4e9901f7eca1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/35aec2b76ac88c6db8af7941e4aefeef.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/36891f824b34113d5d17a42b603692dc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/36b2a40d21f0fdb1d2a89cba845ee230.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/383a65f978acb04d47cc1bde375c2dd1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/392827eba05209c60301da950271d439.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3a7b8dea4c6c14b2aa0990a2a2f0388e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3aae8fd8caf681e8467323dea278361c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3bf75229374eaf6795ce67f5269250d0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3c86228d03a7837ef2ceeb10a8fee1d6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/3ff37cabe5480f9e30503d43de391478.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/408c1d0927cf88f28eef05d9af0e009c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/4533c646fdca8bf47e46668d22c9cbd1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/48dece177dea236c43787e81a1085bbc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/4cffcaf525994fa36c30b31d0eddbb44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/549c7735092f6b420bc916fc05dce985.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/57e83309dbdbaab5b0b9464fab5b2072.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/586f1a4b7396704a91bd776ea5419923.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/5f8515009433a1cfb1f76f0b89d9747c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/61c357783a845d34487ae7cfb0a2ed0e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/664b20a6bc1b4b2e703e7123800e3740.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/685d284bf539020129853069a0822ab9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/69977e0e719cfd1d475f11689cd42245.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/717c0c86037d5112d82ff57c6510e400.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/72bb3bed098c3819816dd809ecc5ad5d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7807fcba6a51441c308bee8785af6620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7a7e999690db2fe4b19a4fd1faa0c5fd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7d79ef97d8cf166cb1b4c67e12b0d5b0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7e64e49a9766dff8c006e9226778aed3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7f22631117ed8f4930bb9c128a92c6dc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/7f629ccf81553bd713559692d84b1f22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/83ed94aade6830fbceadb8c466b8cf2b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/84199af2b4fb74a630a298ab2355e59c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/873bb2f41f907ebe65b1246630cd4316.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/8876863f9cabe53f9c447891fb2dca69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/8b5a88456a06f78033ad1be15b9dbd27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/959c803f0fc8b384b572bbd5a0eedc75.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/981066815335a2c7245cb2bdb0da974c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/986d44338753c28fa009c79ba31ab42d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/9a94123c4bbae1c483467ea5435489d9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/9b26f8dd4e8e4975988d838aa51e267d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/9f0967655ca2e761fbbae2597f18b223.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/a122d5d246bc9a8dba53e7c205aaf361.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/aa134b46de65719d0415836b217b5329.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/b08e1b3c24d5b69272285616099e6ad8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/b297e944d06059458e7ffbed89a59ee2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/b9ca983800d7157e21b2f6ac62a54e0d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/b9f8f3d2f2db5891817c4afb0b3d9888.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/bab0423ff0411dbc5d34e8a0315f3b2f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/bad710a1384251fcc17af34c89eb147f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/bd403f47a188afacfa45001692347efc.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/beb2223ad2274d1ae02aff49b7dd775e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/c22538e2beb7810dcccb50e0c50ef40f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/c3aa3d38fc47d56fc270299a7255262c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/c41cf56d3b522bd7bf7ab8c39cc22a74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/c606a730635e8fae30dc613e0b4a6f2f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/ca79793dc997c0348eca87a1977354b8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/cc5d273dc186645f866954e140a508e7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/ce4593a4171bb7318b8dd64e6c063f70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/d13b9ac77e1919037f4caa4c1324ed4f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/d21dabdad8a73d8d3c48aec726ed4c34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/d6371b81df401f2a80858b8883ed723f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/d7aeb4801b109fe04df34b08fb7176f2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/d868bedaa9f337a033752f4f61052efe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/da0ad685917bfc2f1db96419978d23b5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/da9c7b663d4dc4c9795c408bb80d1ca9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/dbaec0701ff5170f5b7f225506d3aa8a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/dc6564af55407106462bd8c74c715eb5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/de4b08153fbf8d531d98f9a7f246b28d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e0ca54defd84b3f4def111ca91a720fe.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e44775ad1285cce554e0985d82428e72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e4539d4d1a4300f3216edfa9f79f411f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e6f6f1f99283b0b0cf0015bc9d1558d8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e7e109f4b8e2597bef6129086d4a46be.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e96b93a245765f3dba998de7e8d43e38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/e9a0570e5d09c8c832d66f6270c1e9ee.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/ed5b0edf68076c4a014a9d48b9c57277.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/ede8bb6a1c42bdf887e7c20c83d38c76.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f1770aa715760deb1f63b7f099c99b29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f2e6d089adb3f747ba9e98c69811c866.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f3b27f7fa61450039e6f4337601ef200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f7036dd7412a7aa75da629ca2cfd1074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f809f0988de10bad6b82a22501a24044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f8538d2a10e2a99cb43b21a528c0c03d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/f9b2506995b5c6eaecb088396f768dc8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190220/feedcc1ba8356d8e8ae5dd9306a21ac3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/goodsImg/20190222/90adbecc124af5819d2ec4705b357e7d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/25e262202a1ae462abc892af34455fbd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/28564c96dc76aa40f4bc4e15b4840f96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/8c8b44a1a11d7188527aeab2db7f9ca4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/a1ff109efd11819d4904a0899a2dd7ed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/bb898b1db09a7826aeb0292ff6467e6b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/c33755e11ddcb16fe331ed5639e1810b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/d5dc098ba860bbb7c064be902067db58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190118/fa62a09cc76fa44b2bc85e9682aaa055.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/01018458c57ddff9aae9bdfd1926e84b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/0690c4538d56fd8c04be51b6f6545cf4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/0bcab5ac95f7533892cf45b5627b013d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/0f14385749ea5230b73ee9a9df450c3b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/19b3cb295f430627274fc382582cf43d.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/264faaf75c7163eb23d3b4f10a0ccfea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/2beca6673f0c14274ca42e91c4fdb81a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/3688196225632b18f2b670aeef702014.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/7888a21edba50d46713a700ba7e1690a.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/81175690296d970c90c9ba48f314ebb5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/8b269a5661c209accb3688397261b819.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/97eb7b67a1fbb02623ffab7892ec1797.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/9b323556d829d592e7d079e552c807b1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/9dbe70f453da4a5482527f861447334b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/af4059d8c4bab7aad346fa78f366195c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/af732b9dba5e298813b62477e00a01a5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/ce98d8a8eac1561360298ea43134b3fd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/d8c0487d8edce86eb641195de775f484.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/e366c5fe3dd102d4be72cbcf1acbb116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/e934e7ffc5966c401b151a4615d4d016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/20190220/ff6f9f2fac00784f5e8f7e696711ec86.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Admin/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Admin/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Model/WxUsermodel.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,23 +196,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
+        <entry file="file://$PROJECT_DIR$/app/Admin/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="49" column="229" selection-start-line="49" selection-start-column="229" selection-end-line="49" selection-end-column="229" />
-              <folding>
-                <element signature="e#45#71#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="476">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -66,6 +220,7 @@
         <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/Admin/routes.php" />
       </list>
     </option>
   </component>
@@ -173,6 +328,9 @@
     <option name="width" value="1460" />
     <option name="height" value="979" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -195,6 +353,19 @@
               <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
               <item name="new_shop" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,35 +374,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Http" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Weixin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,9 +389,15 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\new_shop\public" />
+      <recent name="Z:\new_shop\app\Model" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -280,12 +428,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556249697424</updated>
       <workItem from="1556249698714" duration="3824000" />
-      <workItem from="1556256626171" duration="1689000" />
+      <workItem from="1556256626171" duration="3625000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5513000" />
+    <option name="totallyTimeSpent" value="7449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -324,13 +472,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/WxUsermodel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -352,20 +493,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="49" column="229" selection-start-line="49" selection-start-column="229" selection-end-line="49" selection-end-column="229" />
+        <state relative-caret-position="-3347">
+          <caret line="53" column="124" selection-start-line="53" selection-start-column="124" selection-end-line="53" selection-end-column="124" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../shop/app/Admin/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="15" column="55" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/WxUserModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/GoodsModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/OrderModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Admin/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
