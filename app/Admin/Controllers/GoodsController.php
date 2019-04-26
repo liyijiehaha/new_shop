@@ -81,23 +81,13 @@ class GoodsController extends Controller
     {
         $grid = new Grid(new GoodsModel);
 
-        $grid->goods_id('Goods id');
-        $grid->goods_name('Goods name');
-        $grid->self_price('Self price');
-        $grid->market_price('Market price');
-        $grid->goods_num('Goods num');
-        $grid->goods_score('Goods score');
-        $grid->goods_desc('Goods desc');
-        $grid->is_up('Is up');
-        $grid->is_new('Is new');
-        $grid->is_best('Is best');
-        $grid->is_hot('Is hot');
-        $grid->goods_img('Goods img');
-        $grid->goods_imgs('Goods imgs');
-        $grid->cate_id('Cate id');
-        $grid->brand_id('Brand id');
-        $grid->create_time('Create time');
-        $grid->is_delete('Is delete');
+        $grid->goods_id('商品id');
+        $grid->goods_name('商品名称');
+        $grid->goods_desc('商品描述');
+//        $grid->goods_img('商品图片')->display(function($img){
+//            return '<img src="/uploads/goodsImg/'.$img.'">';
+//        });
+
 
         return $grid;
     }
