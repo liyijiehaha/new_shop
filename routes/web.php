@@ -26,3 +26,7 @@ Route::get('/weixin/getaccesstoken','Weixin\WxController@getaccesstoken');
 Route::get('/weixin/create_menu','Weixin\WxController@create_menu');
 /*群发*/
 Route::get('weixin/send','Weixin\WxController@send');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
