@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers\Weixin;
-use App\Model\WxUsermodel;
+use App\Model\WxUserModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
@@ -31,7 +31,7 @@ class WxController extends Controller
         $client=new Client();
         if($event=='subscribe'){
             //根据openid判断用户是否已存在
-            $Weixin_model=new WxUsermodel();
+            $Weixin_model=new WxUserModel();
             $local_user=$Weixin_model->where(['openid'=>$openid])->first();
             if($local_user){
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱回来 '. $local_user['nickname'] .']]></Content></xml>';
@@ -45,7 +45,7 @@ class WxController extends Controller
                     'sex'=>$u['sex'],
                     'headimgurl'=>$u['headimgurl'],
                 ];
-                $Weixin_model=new WxUsermodel();
+                $Weixin_model=new WxUserModel();
                 $res= $Weixin_model->insert($u_info);
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱关注小杰娃 '. $u['nickname'] .']]></Content></xml>';
             }
