@@ -14,4 +14,5 @@ Route::group([
     Route::resource('/goods',GoodsController::class);
     Route::resource('/order',OrderController::class);
     Route::resource('/WxUser',WxUserController::class);
+    Route::resource('/Material',MaterialController::class);
 });
