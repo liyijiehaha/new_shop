@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/info', function () {
+    phpinfo();
+});
+//微信接口返回文件
+Route::get('/weixin/list','Weixin\WxController@list');
+Route::post('/weixin/list','Weixin\WxController@wxEvent');
+/*获取access_token*/
+Route::get('/weixin/getaccesstoken','Weixin\WxController@getaccesstoken');
+/*菜单*/
+Route::get('/weixin/create_menu','Weixin\WxController@create_menu');
+/*群发*/
+Route::get('weixin/send','Weixin\WxController@send');
