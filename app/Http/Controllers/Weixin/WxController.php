@@ -21,7 +21,7 @@ class WxController extends Controller
         $str = $time.$content."\n";
         file_put_contents("logs/wx_event.log",$str,FILE_APPEND);
         $data=simplexml_load_string($content);
-        print_r($data);die;
+//        echo '<pre>';print_r($data);echo '</pre>';die;
         $openid=$data->FromUserName;//用户openid
         $app=$data->ToUserName;//公众号id
         $event=$data->Event;
