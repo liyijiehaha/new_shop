@@ -31,7 +31,7 @@ class WxController extends Controller
         $client=new Client();
         if($event=='subscribe'){
             //根据openid判断用户是否已存在
-            $Weixin_model=new Weixinmodel();
+            $Weixin_model=new WxUsermodel();
             $local_user=$Weixin_model->where(['openid'=>$openid])->first();
             if($local_user){
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '欢迎回来 '. $local_user['nickname'] .']]></Content></xml>';
@@ -45,7 +45,7 @@ class WxController extends Controller
                     'sex'=>$u['sex'],
                     'headimgurl'=>$u['headimgurl'],
                 ];
-                $Weixin_model=new Weixinmodel();
+                $Weixin_model=new WxUsermodel();
                 $res= $Weixin_model->insert($u_info);
                 echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '欢迎关注 '. $u['nickname'] .']]></Content></xml>';
             }
