@@ -11,8 +11,11 @@ Route::group([
 ], function (Router $router) {
 
     $router->get('/', 'HomeController@index')->name('admin.home');
-    Route::resource('/goods',GoodsController::class);
-    Route::resource('/order',OrderController::class);
+    Route::resource('/Goods',GoodsController::class);
+    Route::resource('/Order',OrderController::class);
     Route::resource('/WxUser',WxUserController::class);
     Route::resource('/Material',MaterialController::class);
+    Route::resource('/Message',MessageController::class);
+    Route::get('/MessageAdd','MessageController@Add');
+    Route::post('/getaccesstoken','MessageController@getaccesstoken');
 });
