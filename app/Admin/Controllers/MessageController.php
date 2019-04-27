@@ -60,6 +60,7 @@ class MessageController extends Controller
          $response=$client->request('POST',$url,[
                     'body'=>$str
          ]);
+         return "发送成功";
 
     }
 }

@@ -17,5 +17,5 @@ Route::group([
     Route::resource('/Material',MaterialController::class);
     Route::resource('/Message',MessageController::class);
     Route::get('/MessageAdd','MessageController@Add');
-    Route::post('/getaccesstoken','MessageController@getaccesstoken');
+    Route::get('/getaccesstoken','MessageController@getaccesstoken');
 });
