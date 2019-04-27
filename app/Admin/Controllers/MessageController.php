@@ -26,7 +26,7 @@ class MessageController extends Controller
        $data=DB::table('wx_user')->get();
        return $content->header('用户管理')->description('群发消息')->body(view('admin.weixin.message',['data'=>$data]));
     }
-    public function getaccesstoken(){
+    public function Getaccesstoken(){
         $key = 'sdk_accesstoken';
         $token = Redis::get($key);
         if($token){

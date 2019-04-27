@@ -17,5 +17,11 @@ Route::group([
     Route::resource('/Material',MaterialController::class);
     Route::resource('/Message',MessageController::class);
     Route::get('/MessageAdd','MessageController@Add');
-    Route::get('/getaccesstoken','MessageController@getaccesstoken');
+    Route::get('/Getaccesstoken','MessageController@getaccesstoken');
+    //素材添加页面
+    Route::get('Fodder','FodderController@index');
+    ROute::post('fodderAdd','FodderController@fodderAdd');
+    Route::get('/getaccesstoken','FodderController@getaccesstoken');
+
+
 });
