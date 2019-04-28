@@ -74,7 +74,7 @@ class WxController extends Controller
                               <Title><![CDATA['. '欢迎关注 '. $u_info['nickname'] .']]]></Title>
                               <Description><![CDATA[ cddcdcd]></Description>
                               <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/20190220/3a7b8dea4c6c14b2aa0990a2a2f0388e.jpg' . ']]></PicUrl>
-                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/Goods/goodsdetail'  . ']]></Url>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail'  . ']]></Url>
                             </item>
                           </Articles>
                       </xml>';
