@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/info', function () {
     phpinfo();
 });
+//Auth
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
 //微信接口返回文件
 Route::get('/weixin/list','Weixin\WxController@list');
 Route::post('/weixin/list','Weixin\WxController@wxEvent');
@@ -27,6 +30,6 @@ Route::get('/weixin/create_menu','Weixin\WxController@create_menu');
 /*群发*/
 Route::get('weixin/send','Weixin\WxController@send');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+//获取access_token
+Route::get('/TmpUser/getaccesstoken','Weixin\TmpUserController@getaccesstoken');
+Route::get('/TmpUser/tmper','Weixin\TmpUserController@tmper');
