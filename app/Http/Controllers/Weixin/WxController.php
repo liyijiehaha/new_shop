@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Weixin;
 use App\Model\WxUserModel;
+use App\model\UserModel;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use GuzzleHttp\Client;
@@ -14,69 +15,71 @@ class WxController extends Controller
         echo $_GET['echostr'];
     }
     //点击关注
-    public function event(){
+    public function wxEvent(){
 
         $content = file_get_contents("php://input");
         $time = date('Y-m-d H:i:s');
-        $str = $time . $content . "\n";
-        file_put_contents("logs/wx_event.log", $str, FILE_APPEND);
-        $data = simplexml_load_string($content);
-        $openid = $data->FromUserName;   //用户openid
-        $app_id = $data->ToUserName;    //公总号id
-        $event = $data->Event;
-        //扫码关注
-        if ($event == 'subscribe') {
+        is_dir('logs')or mkdir('logs',0777,true);
+        $str = $time.$content."\n";
+        file_put_contents("logs/wx_event.log",$str,FILE_APPEND);
+        $data=simplexml_load_string($content);
+//        echo '<pre>';print_r($data);echo '</pre>';die;
+        $openid=$data->FromUserName;//用户openid
+        $app=$data->ToUserName;//公众号id
+        $event=$data->Event;
+        $type=$data->MsgType;//消息类型
+        $create_time=$data->CreateTime;
+        $text=$data->Content;
+        $client=new Client();
+        if($event=='subscribe'){
             //根据openid判断用户是否已存在
-            $localuser = DB::table('wx_user')->where(['openid' => $openid])->first();
-            $res = DB::table('shop_goods')->orderBy('create_time', 'desc')->first();
-            if ($localuser) {
-                //用户关注过
-                echo '
-                      <xml>
+            $Weixin_model=new WxUserModel();
+            $local_user=$Weixin_model->where(['openid'=>$openid])->first();
+            if($local_user){
+                echo  '<xml>
                           <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
-                          <FromUserName><![CDATA[' . $app_id . ']]></FromUserName>
+                          <FromUserName><![CDATA[' . $app . ']]></FromUserName>
                           <CreateTime>' . time() . '</CreateTime>
                           <MsgType><![CDATA[news]]></MsgType>      
                           <ArticleCount>1</ArticleCount>
                           <Articles>
                             <item>
-                              <Title><![CDATA['. '欢迎回来 '. $localuser['nickname'] .']]></Title>
-                              <Description><![CDATA[' . $res->goods_desc . ']]></Description>
+                              <Title><![CDATA['. '欢迎回来 '. $local_user['nickname'] .']]></Title>
+                              <Description><![CDATA[' . $local_user->goods_desc . ']]></Description>
                               <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/20190220/3a7b8dea4c6c14b2aa0990a2a2f0388e.jpg' . ']]></PicUrl>
-                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/Goods/goodsdetail/' . $res->goods_id . ']]></Url>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/Goods/goodsdetail/' . $local_user->goods_id . ']]></Url>
                             </item>
                           </Articles>
                      </xml>';
-            } else {
-                //用户关注
+            }else{
                 //获取用户信息
-                $arr = $this->getaccesstoken($openid);
-                //用户信息入户
-                $info = [
-                    'openid' => $arr['openid'],
-                    'nickname' => $arr['nickname'],
-                    'sex' => $arr['sex'],
-                    'headimgurl' => $arr['headimgurl'],
+                $u=$this ->getUserInfo($openid);
+                //用户信息入库
+                $u_info=[
+                    'openid'=>$u['openid'],
+                    'nickname'=>$u['nickname'],
+                    'sex'=>$u['sex'],
+                    'headimgurl'=>$u['headimgurl'],
                 ];
-                DB::table('tmp_wx_user')->insertGetId($info);
+                $Weixin_model=new WxUserModel();
+                $res= DB::table('wx_user')->insert($u_info);
                 echo '<xml>
                         <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
-                        <FromUserName><![CDATA[' . $app_id . ']]></FromUserName>
+                        <FromUserName><![CDATA[' . $app . ']]></FromUserName>
                         <CreateTime>' . time() . '</CreateTime>
                         <MsgType><![CDATA[text]]></MsgType>
                          <ArticleCount>1</ArticleCount>
                           <Articles>
                             <item>
-                              <Title><![CDATA['. '欢迎关注 '. $info['nickname'] .']]]></Title>
-                              <Description><![CDATA[' . $arr->goods_desc . ']]></Description>
+                              <Title><![CDATA['. '欢迎关注 '. $u_info['nickname'] .']]]></Title>
+                              <Description><![CDATA[ cddcdcd]></Description>
                               <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/20190220/3a7b8dea4c6c14b2aa0990a2a2f0388e.jpg' . ']]></PicUrl>
-                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/Goods/goodsdetail/' . $arr->goods_id . ']]></Url>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/Goods/goodsdetail'  . ']]></Url>
                             </item>
                           </Articles>
                       </xml>';
             }
         }
-//
     }
     //获取access_token
     public function getaccesstoken(){
@@ -100,9 +103,12 @@ class WxController extends Controller
         $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
         return json_decode(file_get_contents($url),true);
     }
-//    public function goodsdetail(){
-//        $res=DB::table('shop_goods')->where(['gooods_id'=>36])->first();
-//        return
-//    }
+    public function goodsdetail(){
+        $res=DB::table('shop_goods')->where(['goods_id'=>36])->first();
+        $data=[
+            'res'=>$res
+        ];
+        return view('goods/goodsdetail',$data);
+    }
 
 }
