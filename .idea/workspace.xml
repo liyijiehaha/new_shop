@@ -50,21 +50,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="259" column="50" selection-start-line="259" selection-start-column="50" selection-end-line="259" selection-end-column="50" />
+            <state relative-caret-position="582">
+              <caret line="105" column="7" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="105" selection-end-column="7" />
               <folding>
                 <element signature="e#45#71#0#PHP" expanded="true" />
                 <element signature="e#332#392#0#PHP" />
-                <element signature="e#408#6359#0#PHP" />
-                <element signature="e#2948#3568#0#PHP" />
-                <element signature="e#3568#4422#0#PHP" />
-                <element signature="e#4422#6353#0#PHP" />
                 <element signature="e#5704#6267#0#PHP" />
                 <element signature="e#6966#7234#0#PHP" />
-                <element signature="e#7250#8118#0#PHP" />
-                <element signature="e#8144#8678#0#PHP" />
-                <element signature="e#8680#9053#0#PHP" />
-                <element signature="e#9055#11863#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -74,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/MessageController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
-              <caret line="61" column="12" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="61" selection-end-column="12" />
+              <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
               <folding>
                 <element signature="e#40#77#0#PHP" expanded="true" />
                 <element signature="e#742#1316#0#PHP" />
@@ -86,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+            <state relative-caret-position="-9">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -121,8 +113,8 @@
         <option value="$PROJECT_DIR$/app/Admin/Controllers/UploadMaterailController.php" />
         <option value="$PROJECT_DIR$/app/Admin/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/TmpUserController.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Helper/functions.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
       </list>
     </option>
@@ -257,6 +249,17 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Helper" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -318,12 +321,12 @@
       <updated>1556249697424</updated>
       <workItem from="1556249698714" duration="3824000" />
       <workItem from="1556256626171" duration="22216000" />
-      <workItem from="1556411262565" duration="19108000" />
+      <workItem from="1556411262565" duration="21373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45148000" />
+    <option name="totallyTimeSpent" value="47413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -351,7 +354,7 @@
       <window_info anchor="right" id="Remote Host" order="4" weight="0.27882037" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25268096" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12600537" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -375,6 +378,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php</url>
+          <line>102</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/config/database.php">
@@ -564,10 +578,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Helper/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="n#getticket#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Admin/Controllers/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
-          <caret line="61" column="12" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="61" selection-end-column="12" />
+          <caret line="61" column="12" lean-forward="true" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
           <folding>
             <element signature="e#40#77#0#PHP" expanded="true" />
             <element signature="e#742#1316#0#PHP" />
@@ -577,8 +601,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        <state relative-caret-position="-9">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -594,33 +618,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Helper/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="n#getticket#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="259" column="50" selection-start-line="259" selection-start-column="50" selection-end-line="259" selection-end-column="50" />
+        <state relative-caret-position="582">
+          <caret line="105" column="7" lean-forward="true" selection-start-line="102" selection-start-column="6" selection-end-line="105" selection-end-column="7" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
             <element signature="e#332#392#0#PHP" />
-            <element signature="e#408#6359#0#PHP" />
-            <element signature="e#2948#3568#0#PHP" />
-            <element signature="e#3568#4422#0#PHP" />
-            <element signature="e#4422#6353#0#PHP" />
             <element signature="e#5704#6267#0#PHP" />
             <element signature="e#6966#7234#0#PHP" />
-            <element signature="e#7250#8118#0#PHP" />
-            <element signature="e#8144#8678#0#PHP" />
-            <element signature="e#8680#9053#0#PHP" />
-            <element signature="e#9055#11863#0#PHP" />
           </folding>
         </state>
       </provider>
