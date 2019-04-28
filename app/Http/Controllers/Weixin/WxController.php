@@ -21,7 +21,7 @@ class WxController extends Controller
         $str = $time.$content."\n";
         file_put_contents("logs/wx_event.log",$str,FILE_APPEND);
         $data=simplexml_load_string($content);
-//        echo '<pre>';print_r($data);echo '</pre>';die;
+//        echo '<pre>';print_r($data);echo '</pre>';
         $openid=$data->FromUserName;//用户openid
         $app=$data->ToUserName;//公众号id
         $event=$data->Event;
@@ -30,36 +30,11 @@ class WxController extends Controller
         $text=$data->Content;
         $client=new Client();
         if($type=='event'){
-//            //根据openid判断用户是否已存在
-//            $Weixin_model=new WxUserModel();
-//            $local_user=$Weixin_model->where(['openid'=>$openid])->first();
-//            if($local_user){
-//                echo '<xml>
-//                        <ToUserName><![CDATA['.$openid.']]></ToUserName>
-//                        <FromUserName><![CDATA['.$app.']]></FromUserName>
-//                        <CreateTime>'.time().'</CreateTime>
-//                        <MsgType><![CDATA[text]]></MsgType>
-//                        <Content><![CDATA['. '呦呵！欢迎小可爱回来 '. $local_user['nickname'] .']]></Content>
-//                        </xml>';
-//            }else{
-//                //获取用户信息
-//                $u=$this ->getUserInfo($openid);
-//                //用户信息入库
-//                $u_info=[
-//                    'openid'=>$u['openid'],
-//                    'nickname'=>$u['nickname'],
-//                    'sex'=>$u['sex'],
-//                    'headimgurl'=>$u['headimgurl'],
-//                ];
-//                $Weixin_model=new WxUserModel();
-//                $res= $Weixin_model->insert($u_info);
-//                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱关注小杰娃 '. $u['nickname'] .']]></Content></xml>';
-//            }
             $event = $data->Event;       //事件类型
             switch ($event)
             {
                 case 'SCAN':                //扫码
-                    if(isset($xml_obj->EventKey)){
+                    if(isset($data->EventKey)){
                         $this->scanQRCode($data);
                     }
                     break;
@@ -143,7 +118,7 @@ class WxController extends Controller
         $key='wx_assess_token';
         $token=Redis::get($key);
         if($token){
-            echo '有';
+            return $token;
         }else{
             $url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET');
             $response=file_get_contents($url);
@@ -151,15 +126,14 @@ class WxController extends Controller
             Redis::set($key,$arr['access_token']);
             Redis::expire($key,3600);
             $token=$arr['access_token'];
+            return $token;
         }
-        return $token;
+
     }
     //获取微信用户
     public function getUserInfo($openid){
         $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
-        $data=file_get_contents($url);
-        $u=json_decode($data,true);
-        return $u;
+        return json_decode(file_get_contents($url),true);
     }
     //创建微二级菜单
     public function create_menu(){
@@ -237,19 +211,19 @@ class WxController extends Controller
                               <Articles>
                                 <item>
                                   <Title><![CDATA[欢迎回来]]></Title>
-                                  <Description><![CDATA[IPhoneX]]></Description>
+                                  <Description><![CDATA[haha]]></Description>
                                   <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
-                                  <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail/]]></Url>
+                                  <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail]]></Url>
                                 </item>
                               </Articles>
                             </xml>';
         }else{         //用户不存在（新用户）
             //获取用户信息入库
-            $user_info = getUserInfo($open_id);
+            $user_info =$this-> getUserInfo($open_id);
             //用户信息入库
             $data = [
                 'openid'    => $user_info['openid'],
-                'add_time'    => time(),
+                'create_time'    => time(),
                 'nickname'    => $user_info['nickname'],
                 'sex'    => $user_info['sex'],
                 'city'    => $user_info['city'],
@@ -268,7 +242,7 @@ class WxController extends Controller
                           <Articles>
                             <item>
                               <Title><![CDATA[最新商品]]></Title>
-                              <Description><![CDATA[IPhoneX]]></Description>
+                              <Description><![CDATA[haha]]></Description>
                               <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
                               <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail]]></Url>
                             </item>
@@ -279,24 +253,26 @@ class WxController extends Controller
 
     }
     public function scanQRCodeSubscribe($data){
-        if(isset($xml_obj->EventKey)){
+        if(isset($data->EventKey)){
             $qrscene = explode('_',$data->EventKey)[1];      //获取场景值
+//            var_dump($qrscene);
             //获取用户信息入库
-            $user_info = getWxUserInfo($data->FromUserName);
+            $user_info =$this-> getUserInfo($data->FromUserName);
+//            var_dump($user_info);die;
             //用户信息入库
-            $data = [
+            $arr = [
                 'openid'    => $user_info['openid'],
-                'add_time'    => time(),
+                'create_time'    => time(),
                 'nickname'    => $user_info['nickname'],
                 'sex'    => $user_info['sex'],
                 'city'    => $user_info['city'],
                 'province'    => $user_info['province'],
                 'headimgurl'    => $user_info['headimgurl'],
-                'subscribe_time'    => $user_info['subscribe_time'],
                 'scence_id'    => $qrscene,
             ];
-            $id = DB::table('tmp_wx_users')->insertGetId($data);
-            if($id){        //记录成功
+            $id = DB::table('tmp_wx_users')->insertGetId($arr);
+            if($id){
+                //记录成功
                 $response_xml = '<xml>
                           <ToUserName><![CDATA['.$data->FromUserName.']]></ToUserName>
                           <FromUserName><![CDATA['.$data->ToUserName.']]></FromUserName>
@@ -306,7 +282,7 @@ class WxController extends Controller
                           <Articles>
                             <item>
                               <Title><![CDATA[欢迎新用户]]></Title>
-                              <Description><![CDATA[IPhoneX]]></Description>
+                              <Description><![CDATA[123]]></Description>
                               <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
                               <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail]]></Url>
                             </item>
