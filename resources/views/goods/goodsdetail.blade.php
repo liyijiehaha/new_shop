@@ -10,5 +10,11 @@
 <body>
         {{$res->goods_id}}
         {{$res->goods_name}}
+<div id="qrcode"></div>
 </body>
 </html>
+<script src="/js/weixin/jquery-1.12.4.min.js"></script>
+<script src="/js/weixin/qrcode.js"></script>
+<script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "{{$code_url}}");
+</script>

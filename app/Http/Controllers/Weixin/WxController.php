@@ -106,8 +106,10 @@ class WxController extends Controller
     public function goodsdetail(){
         $res=DB::table('shop_goods')->where(['goods_id'=>36])->first();
         $data=[
-            'res'=>$res
+            'res'=>$res,
+            'code_url'=>"http://1809liyijie.comcto.com/goods/goodsdetail?goods_id=36"
         ];
+
         return view('goods/goodsdetail',$data);
     }
 
