@@ -14,14 +14,16 @@ Route::group([
     Route::resource('/Goods',GoodsController::class);
     Route::resource('/Order',OrderController::class);
     Route::resource('/WxUser',WxUserController::class);
+    //素材
     Route::resource('/Material',MaterialController::class);
+    //群发
     Route::resource('/Message',MessageController::class);
     Route::get('/MessageAdd','MessageController@Add');
     Route::get('/Getaccesstoken','MessageController@getaccesstoken');
     //素材添加页面
     Route::get('Fodder','FodderController@index');
-    ROute::post('fodderAdd','FodderController@fodderAdd');
+    Route::post('fodderAdd','FodderController@fodderAdd');
     Route::get('/getaccesstoken','FodderController@getaccesstoken');
-
-
+    //文件上传素材管理
+    Route::get('UploadMateril','UploadMaterailController@index');
 });

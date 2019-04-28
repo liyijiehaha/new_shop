@@ -50,6 +50,9 @@ class FodderController extends Controller
 //            dd($json);
            if(isset($json['media_id'])){
                DB::table('wx_fodder')->insert(['media_id'=>$json['media_id']]);
+               echo '成功';
+           }else{
+               echo '失败';
            }
         }
 
@@ -63,14 +66,12 @@ class FodderController extends Controller
         }
         return false;
     }
-
     public function getaccesstoken(){
         $key = 'sdk_accesstoken';
         $token = Redis::get($key);
         if($token){
             return $token;
         }else{
-            echo "没有  添加:";
             $url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=".env('WX_APPID')."&secret=".env('WX_APPSECRET');
             $arr = json_decode(file_get_contents($url),true);
             Redis::set($key,$arr['access_token']);
