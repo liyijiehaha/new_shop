@@ -322,7 +322,8 @@ class WxController extends Controller
                     </xml>';
             }
         }
-        die($response_xml);
+//        die($response_xml);
+        return ($response_xml);
     }
 
 }
