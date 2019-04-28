@@ -29,25 +29,44 @@ class WxController extends Controller
         $create_time=$data->CreateTime;
         $text=$data->Content;
         $client=new Client();
-        if($event=='subscribe'){
-            //根据openid判断用户是否已存在
-            $Weixin_model=new WxUserModel();
-            $local_user=$Weixin_model->where(['openid'=>$openid])->first();
-            if($local_user){
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱回来 '. $local_user['nickname'] .']]></Content></xml>';
-            }else{
-                //获取用户信息
-                $u=$this ->getUserInfo($openid);
-                //用户信息入库
-                $u_info=[
-                    'openid'=>$u['openid'],
-                    'nickname'=>$u['nickname'],
-                    'sex'=>$u['sex'],
-                    'headimgurl'=>$u['headimgurl'],
-                ];
-                $Weixin_model=new WxUserModel();
-                $res= $Weixin_model->insert($u_info);
-                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱关注小杰娃 '. $u['nickname'] .']]></Content></xml>';
+        if($type=='event'){
+//            //根据openid判断用户是否已存在
+//            $Weixin_model=new WxUserModel();
+//            $local_user=$Weixin_model->where(['openid'=>$openid])->first();
+//            if($local_user){
+//                echo '<xml>
+//                        <ToUserName><![CDATA['.$openid.']]></ToUserName>
+//                        <FromUserName><![CDATA['.$app.']]></FromUserName>
+//                        <CreateTime>'.time().'</CreateTime>
+//                        <MsgType><![CDATA[text]]></MsgType>
+//                        <Content><![CDATA['. '呦呵！欢迎小可爱回来 '. $local_user['nickname'] .']]></Content>
+//                        </xml>';
+//            }else{
+//                //获取用户信息
+//                $u=$this ->getUserInfo($openid);
+//                //用户信息入库
+//                $u_info=[
+//                    'openid'=>$u['openid'],
+//                    'nickname'=>$u['nickname'],
+//                    'sex'=>$u['sex'],
+//                    'headimgurl'=>$u['headimgurl'],
+//                ];
+//                $Weixin_model=new WxUserModel();
+//                $res= $Weixin_model->insert($u_info);
+//                echo '<xml><ToUserName><![CDATA['.$openid.']]></ToUserName><FromUserName><![CDATA['.$app.']]></FromUserName><CreateTime>'.time().'</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA['. '呦呵！欢迎小可爱关注小杰娃 '. $u['nickname'] .']]></Content></xml>';
+//            }
+            $event = $data->Event;       //事件类型
+            switch ($event)
+            {
+                case 'SCAN':                //扫码
+                    if(isset($xml_obj->EventKey)){
+                        $this->scanQRCode($data);
+                    }
+                    break;
+                case 'subscribe':
+                    $this->scanQRCodeSubscribe($data);       //扫码关注
+                default:
+                    $response_xml = 'success';
             }
         }elseif($type=='voice'){
             $media_id=$data->MediaId;
@@ -149,12 +168,12 @@ class WxController extends Controller
             'button'=>[
                 [
                     'type'=>'click',
-                    'name'=>'123',
+                    'name'=>'李依杰真美哈哈',
                     'key'=> 'V1001_TODAY_TWLY',
                 ],
                 [
                     'type'=>'click',
-                    'name'=>'456',
+                    'name'=>'高祥栋真丑',
                     'key'=> 'V1001_TODAY_JZSC',
                 ]
             ]
@@ -202,6 +221,108 @@ class WxController extends Controller
         }else{
             echo '发送失败';
         }
+    }
+    public function scanQRCode($data){
+
+        $open_id = $data->FromUserName;
+        //检查用户是否已存在
+        $u = DB::table('tmp_wx_users')->where(['openid'=>$open_id])->first();
+        if($u){         //用户已存在
+            $response_xml = '<xml>
+                              <ToUserName><![CDATA['.$open_id.']]></ToUserName>
+                              <FromUserName><![CDATA['.$data->ToUserName.']]></FromUserName>
+                              <CreateTime>'.time().'</CreateTime>
+                              <MsgType><![CDATA[news]]></MsgType>
+                              <ArticleCount>1</ArticleCount>
+                              <Articles>
+                                <item>
+                                  <Title><![CDATA[欢迎回来]]></Title>
+                                  <Description><![CDATA[IPhoneX]]></Description>
+                                  <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
+                                  <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail/]]></Url>
+                                </item>
+                              </Articles>
+                            </xml>';
+        }else{         //用户不存在（新用户）
+            //获取用户信息入库
+            $user_info = getUserInfo($open_id);
+            //用户信息入库
+            $data = [
+                'openid'    => $user_info['openid'],
+                'add_time'    => time(),
+                'nickname'    => $user_info['nickname'],
+                'sex'    => $user_info['sex'],
+                'city'    => $user_info['city'],
+                'province'    => $user_info['province'],
+                'headimgurl'    => $user_info['headimgurl'],
+                'subscribe_time'    => $user_info['subscribe_time'],
+                'scence_id'    => $data->EventKey,
+            ];
+            $id =  DB::table('tmp_wx_users')->insertGetId($data);
+            $response_xml = '<xml>
+                          <ToUserName><![CDATA['.$open_id.']]></ToUserName>
+                          <FromUserName><![CDATA['.$data->ToUserName.']]></FromUserName>
+                          <CreateTime>'.time().'</CreateTime>
+                          <MsgType><![CDATA[news]]></MsgType>
+                          <ArticleCount>1</ArticleCount>
+                          <Articles>
+                            <item>
+                              <Title><![CDATA[最新商品]]></Title>
+                              <Description><![CDATA[IPhoneX]]></Description>
+                              <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
+                              <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail]]></Url>
+                            </item>
+                          </Articles>
+                        </xml>';
+        }
+        die($response_xml);
+
+    }
+    public function scanQRCodeSubscribe($data){
+        if(isset($xml_obj->EventKey)){
+            $qrscene = explode('_',$data->EventKey)[1];      //获取场景值
+            //获取用户信息入库
+            $user_info = getWxUserInfo($data->FromUserName);
+            //用户信息入库
+            $data = [
+                'openid'    => $user_info['openid'],
+                'add_time'    => time(),
+                'nickname'    => $user_info['nickname'],
+                'sex'    => $user_info['sex'],
+                'city'    => $user_info['city'],
+                'province'    => $user_info['province'],
+                'headimgurl'    => $user_info['headimgurl'],
+                'subscribe_time'    => $user_info['subscribe_time'],
+                'scence_id'    => $qrscene,
+            ];
+            $id = DB::table('tmp_wx_users')->insertGetId($data);
+            if($id){        //记录成功
+                $response_xml = '<xml>
+                          <ToUserName><![CDATA['.$data->FromUserName.']]></ToUserName>
+                          <FromUserName><![CDATA['.$data->ToUserName.']]></FromUserName>
+                          <CreateTime>'.time().'</CreateTime>
+                          <MsgType><![CDATA[news]]></MsgType>
+                          <ArticleCount>1</ArticleCount>
+                          <Articles>
+                            <item>
+                              <Title><![CDATA[欢迎新用户]]></Title>
+                              <Description><![CDATA[IPhoneX]]></Description>
+                              <PicUrl><![CDATA[http://1809liyijie.comcto.com/uploads/goodsImg/20190220\220c2da5ee3ada5c34b6f7c0b88bc138.jpg]]></PicUrl>
+                              <Url><![CDATA[http://1809liyijie.comcto.com/goods/detail]]></Url>
+                            </item>
+                          </Articles>
+                        </xml>';
+            }else{
+                $response_xml = '<xml>
+                      <ToUserName><![CDATA['.$data->FromUserName.']]></ToUserName>
+                      <FromUserName><![CDATA['.$data->ToUserName.']]></FromUserName>
+                      <CreateTime>'.time().'</CreateTime>
+                      <MsgType><![CDATA[text]]></MsgType>
+                      <Content><![CDATA[处理失败,请重试!!]]></Content>
+                    </xml>';
+            }
+        }
+        die($response_xml);
     }
 
 }
