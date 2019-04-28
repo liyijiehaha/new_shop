@@ -27,24 +27,24 @@ class TmpUserController extends Controller
     /*永久二维码*/
     public function tmper(){
         $url='https://api.weixin.qq.com/cgi-bin/qrcode/create?access_token='.$this->getaccesstoken();
-        $data='{"action_name": "QR_LIMIT_STR_SCENE", "action_info": {"scene": {"scene_str": "test"}}}';
-        $arr=json_decode($this->https_post($url,$data),true);
+        $data=[
+            "action_name"=>"QR_LIMIT_SCENE",
+            "action_info"=>[
+                "scene"=> [
+                     "scene_id"=>1234
+                ],
+            ],
+        ];
+        $client=new Client();
+        $str=json_encode($data,JSON_UNESCAPED_UNICODE);
+        $response=$client->request('POST',$url,[
+            'body'=>$str
+        ]);
+        $res= $response->getBody();
+        $arr=json_decode($res,true);
         $ticket=$arr['ticket'];
         $url1='https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket='.$ticket;
-       return redirect($url1);
+        return redirect($url1);
     }
-    function https_post($url, $data = null){
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, FALSE);
-        curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, FALSE);
-        if (!empty($data)){
-            curl_setopt($curl, CURLOPT_POST, 1);
-            curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-        }
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-        $output = curl_exec($curl);
-        curl_close($curl);
-        return $output;
-    }
+
 }
