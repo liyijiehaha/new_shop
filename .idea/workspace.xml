@@ -35,8 +35,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="161" column="35" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+            <state relative-caret-position="384">
+              <caret line="164" column="13" lean-forward="true" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
               <folding>
                 <element signature="e#45#71#0#PHP" expanded="true" />
                 <element signature="e#357#417#0#PHP" />
@@ -46,6 +46,15 @@
                 <element signature="e#7044#7396#0#PHP" />
                 <element signature="e#8174#8226#0#PHP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -302,12 +311,12 @@
       <workItem from="1556256626171" duration="22216000" />
       <workItem from="1556411262565" duration="33450000" />
       <workItem from="1556519491251" duration="1108000" />
-      <workItem from="1556520919120" duration="2355000" />
+      <workItem from="1556520919120" duration="2707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62953000" />
+    <option name="totallyTimeSpent" value="63305000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -662,13 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="831">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="519">
@@ -676,10 +678,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="161" column="35" selection-start-line="161" selection-start-column="35" selection-end-line="161" selection-end-column="35" />
+        <state relative-caret-position="384">
+          <caret line="164" column="13" lean-forward="true" selection-start-line="164" selection-start-column="13" selection-end-line="164" selection-end-column="13" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
             <element signature="e#357#417#0#PHP" />

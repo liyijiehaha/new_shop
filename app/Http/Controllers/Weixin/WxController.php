@@ -160,7 +160,7 @@ class WxController extends Controller
                 [
                     'type'=>'view',
                     'name'=>'最新福利',
-                    'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fwxweb%2Fu&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+                    'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fweixin%2Fgetu&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
                 ],
             ]
         ];
