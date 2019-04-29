@@ -16,7 +16,6 @@ class WxController extends Controller
     }
     //点击关注
     public function wxEvent(){
-
         $content = file_get_contents("php://input");
         $time = date('Y-m-d H:i:s');
         is_dir('logs')or mkdir('logs',0777,true);
@@ -79,6 +78,47 @@ class WxController extends Controller
                           </Articles>
                       </xml>';
             }
+        } elseif($type=='text'){
+          $goods_name=$data->Content;
+          $res = DB::table('shop_goods')->where(['goods_name'=>$goods_name])->first();
+          if($res){
+              echo  '<xml>
+                          <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
+                          <FromUserName><![CDATA[' . $app . ']]></FromUserName>
+                          <CreateTime>' . time() . '</CreateTime>
+                          <MsgType><![CDATA[搜索商品]]></MsgType>      
+                          <ArticleCount>1</ArticleCount>
+                          <Articles>
+                            <item>
+                              <Title><![CDATA['.$res->goods_name.']]></Title>
+                              <Description><![CDATA[' . $res->goods_desc . ']]></Description>
+                              <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/$res->goods_img' . ']]></PicUrl>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail/' . $res->goods_id . ']]></Url>
+                            </item>
+                          </Articles>
+                     </xml>';
+          }else{
+              $response=DB::select('SELECT * FROM shop_goods  ORDER BY  RAND() LIMIT 1');
+              $response1=json_encode($response);
+              $arr=json_decode($response1,true);
+              $res=$arr[0];
+              var_dump($res);
+              echo  '<xml>
+                          <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
+                          <FromUserName><![CDATA[' . $app . ']]></FromUserName>
+                          <CreateTime>' . time() . '</CreateTime>
+                          <MsgType><![CDATA[随机搜索]]></MsgType>      
+                          <ArticleCount>1</ArticleCount>
+                          <Articles>
+                            <item>
+                              <Title><![CDATA['.$res['goods_name'].']]></Title>
+                              <Description><![CDATA[' . $res['goods_name']. ']]></Description>
+                              <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/$res[\'goods_img\']' . ']]></PicUrl>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail/' . $res['goods_id'] . ']]></Url>
+                            </item>
+                          </Articles>
+                     </xml>';
+          }
         }
     }
     //获取access_token
