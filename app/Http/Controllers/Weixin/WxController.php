@@ -228,9 +228,10 @@ class WxController extends Controller
             ];
             DB::table('p_sq_user')->insertGetId($aa_info);
             header('Refresh:3;url=goods/goodsdetail/9');
-            echo "<h1>欢迎小可爱授权</h1>";
+           return "<h1>欢迎小可爱授权</h1>";
         }else{
-            echo "<h1>欢迎小可爱回来</h1>";
+            header('Refresh:3;url=goods/goodsdetail/9');
+            return "<h1>欢迎小可爱回来</h1>";
 
         }
 
