@@ -221,7 +221,7 @@ class WxController extends Controller
         $response_user = json_decode(file_get_contents($urll),true);
         echo "<pre>";print_r($response_user);echo "</pre>";
 
-        $res =DB::table('wx_sq_user')->where(['openid'=>$response_user['openid']])->first();
+        $res =DB::table('p_sq_user')->where(['openid'=>$response_user['openid']])->first();
         if($res==NULL){
             $aa_info = [
                 'openid' => $response_user['openid'],
@@ -229,7 +229,7 @@ class WxController extends Controller
                 'sex' => $response_user['sex'],
                 'headimgurl' => $response_user['headimgurl'],
             ];
-            DB::table('wx_sq_user')->insert($aa_info);
+            DB::table('p_sq_user')->insertGetId($aa_info);
             echo "<h1>你好</h1>";
         }else{
             echo "<h1>回来啦</h1>";
