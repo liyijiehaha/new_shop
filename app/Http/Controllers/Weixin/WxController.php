@@ -217,7 +217,7 @@ class WxController extends Controller
         $access_token = $response['access_token'];
         $openid= $response['openid'];
         //获取用户信息
-        $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
+        $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
         $response_user = json_decode(file_get_contents($urll),true);
         echo "<pre>";print_r($response_user);echo "</pre>";
 
