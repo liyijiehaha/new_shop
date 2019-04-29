@@ -71,9 +71,9 @@ class WxController extends Controller
                           <Articles>
                             <item>
                               <Title><![CDATA['. '欢迎关注 '. $u_info['nickname'] .']]]></Title>
-                              <Description><![CDATA[ cddcdcd]></Description>
+                              <Description><![CDATA[haha]></Description>
                               <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/20190220/3a7b8dea4c6c14b2aa0990a2a2f0388e.jpg' . ']]></PicUrl>
-                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail'  . ']]></Url>
+                              <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail/' . $local_user->goods_id . ']]></Url>
                             </item>
                           </Articles>
                       </xml>';
@@ -186,7 +186,7 @@ class WxController extends Controller
     //创建微二级菜单
     public function create_menu(){
         $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->getaccesstoken();
-        $redirect_uri = urlencode('http://1809liyijie.comcto.com/weixin/sign2');  //授权后跳转的地址
+        $redirect_uri = urlencode('http://1809liyijie.comcto.com/weixin/sign');  //授权后跳转的地址
         $arr=[
             'button'=>[
                 [
@@ -242,8 +242,8 @@ class WxController extends Controller
         }
 
     }
-    public function sign2(){
-        return '123456';
+    public function sign(){
+        return '123456789';
     }
     /*根据openid消息群发*/
 //    public function sendMsg($openid_arr,$content){
