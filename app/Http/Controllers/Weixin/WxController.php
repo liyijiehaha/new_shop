@@ -213,14 +213,11 @@ class WxController extends Controller
         //获取access_token
         $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET').'&code='.$code.'&grant_type=authorization_code';
         $response = json_decode(file_get_contents($url),true);
-        echo "<pre>";print_r($response);echo "</pre>";
         $access_token = $response['access_token'];
         $openid= $response['openid'];
         //获取用户信息
         $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
         $response_user = json_decode(file_get_contents($urll),true);
-        echo "<pre>";print_r($response_user);echo "</pre>";
-
         $res =DB::table('p_sq_user')->where(['openid'=>$response_user['openid']])->first();
         if($res==NULL){
             $aa_info = [
@@ -230,9 +227,10 @@ class WxController extends Controller
                 'headimgurl' => $response_user['headimgurl'],
             ];
             DB::table('p_sq_user')->insertGetId($aa_info);
-            echo "<h1>你好</h1>";
+            header('Refresh:3;url=/goods/goodsdetail/9');
+            echo "<h1>欢迎小可爱授权</h1>";
         }else{
-            echo "<h1>回来啦</h1>";
+            echo "<h1>欢迎小可爱回来</h1>";
 
         }
 
