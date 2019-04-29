@@ -161,6 +161,8 @@ class WxController extends Controller
                     'type'=>'click',
                     'name'=>'最新福利',
                     'key'=> 'V1001_TODAY_TWLY',
+                    'url'=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fwxweb%2Fu&response_type=code&scope=snsapi_userinfo &state=STATE#wechat_redirect
+"
                 ],
             ]
         ];
@@ -169,8 +171,8 @@ class WxController extends Controller
         $respons=$client->request('POST',$url,[
             'body'=>$str
         ]);
-        $ass=$respons->getBody();
-        $ar=json_decode($ass,true);
+        $arr=$respons->getBody();
+        $ar=json_decode($arr,true);
         if($ar['errcode']>0){
             echo "创建菜单失败";
         }else{
@@ -178,36 +180,67 @@ class WxController extends Controller
         }
     }
     /*根据openid消息群发*/
-    public function sendMsg($openid_arr,$content){
-        $msg=[
-            'touser'=>$openid_arr,
-            'msgtype'=>"text",
-            "text"=>[
-                "content"=> $content
-            ]
-        ];
-        $data=json_encode($msg,JSON_UNESCAPED_UNICODE);
-        $url='https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token='.$this->getaccesstoken();
-        $client=new Client();
-        $response=$client->request('post',$url,[
-            'body'=>$data
-        ]);
-        return  $response->getBody();
-    }
-    public function send(){
-        $where=[
-            'status'=>1
-        ];
-        $userlist = DB::table('wx_user')->where($where)->get()->toArray();
-        $openid_arr=array_column($userlist,'openid');
-        $msg="李依杰可耐";
-        $res =$this->sendmsg($openid_arr,$msg);
-        if($res){
-            echo '发送成功';
-        }else{
-            echo '发送失败';
-        }
-    }
+//    public function sendMsg($openid_arr,$content){
+//        $msg=[
+//            'touser'=>$openid_arr,
+//            'msgtype'=>"text",
+//            "text"=>[
+//                "content"=> $content
+//            ]
+//        ];
+//        $data=json_encode($msg,JSON_UNESCAPED_UNICODE);
+//        $url='https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token='.$this->getaccesstoken();
+//        $client=new Client();
+//        $response=$client->request('post',$url,[
+//            'body'=>$data
+//        ]);
+//        return  $response->getBody();
+//    }
+//    public function send(){
+//        $where=[
+//            'status'=>1
+//        ];
+//        $userlist = DB::table('wx_user')->where($where)->get()->toArray();
+//        $openid_arr=array_column($userlist,'openid');
+//        $msg="李依杰可耐";
+//        $res =$this->sendmsg($openid_arr,$msg);
+//        if($res){
+//            echo '发送成功';
+//        }else{
+//            echo '发送失败';
+//        }
+//    }
+    public function getu(){
+        echo "<pre>";print_r($_GET);echo "</pre>";die;
+        $code = $_GET['code'];
+        //获取access_token
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET').'&code='.$code.'&grant_type=authorization_code';
+        $response = json_decode(file_get_contents($url),true);
+//        echo "<pre>";print_r($response);echo "</pre>";
+        $access_token = $response['access_token'];
+        $openid= $response['openid'];
 
+        //获取用户信息
+        $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
+        $response_user = json_decode(file_get_contents($urll),true);
+//        echo "<pre>";print_r($response_user);echo "</pre>";
+
+        $res =DB::table('wx_sq_user')->where(['openid'=>$response_user['openid']])->first();
+        if($res==NULL){
+            $aa_info = [
+                'openid' => $response_user['openid'],
+                'nickname' => $response_user['nickname'],
+                'sex' => $response_user['sex'],
+                'headimgurl' => $response_user['headimgurl'],
+                'subscribe_time' => time()
+            ];
+            DB::table('wx_sq_user')->insertGetId($aa_info);
+            echo "<h1>你好你好你好</h1>";
+        }else{
+            echo "<h1>回来啦</h1>";
+
+        }
+
+    }
 
 }
