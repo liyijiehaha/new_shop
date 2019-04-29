@@ -220,7 +220,7 @@ class WxController extends Controller
         //获取用户信息
         $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
         $response_user = json_decode(file_get_contents($urll),true);
-//        echo "<pre>";print_r($response_user);echo "</pre>";
+        echo "<pre>";print_r($response_user);echo "</pre>";
 
         $res =DB::table('wx_sq_user')->where(['openid'=>$response_user['openid']])->first();
         if($res==NULL){
