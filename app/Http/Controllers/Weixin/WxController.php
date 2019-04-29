@@ -162,6 +162,11 @@ class WxController extends Controller
                     'name'=>'最新福利',
                     'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fweixin%2Fgetu&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
                 ],
+                [
+                    'type'=>'view',
+                    'name'=>'签到',
+                    'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fweixin%2Fgetu&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+                ],
             ]
         ];
         $str=json_encode($arr,JSON_UNESCAPED_UNICODE);
