@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4ea150b6-35cb-4ef4-afc3-5481b84b5e4d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,14 +37,22 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="467">
-              <caret line="108" column="48" selection-start-line="108" selection-start-column="48" selection-end-line="108" selection-end-column="48" />
+              <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
               <folding>
                 <element signature="e#45#71#0#PHP" expanded="true" />
                 <element signature="e#1064#6185#0#PHP" />
                 <element signature="e#6217#6790#0#PHP" />
                 <element signature="e#6808#7040#0#PHP" />
-                <element signature="e#7045#7340#0#PHP" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="519">
+              <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -80,8 +89,8 @@
         <option value="$PROJECT_DIR$/app/Helper/functions.php" />
         <option value="$PROJECT_DIR$/app/Model/User2Model.php" />
         <option value="$PROJECT_DIR$/resources/views/goods/goodsdetail.blade..php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/goods/goodsdetail.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
       </list>
     </option>
@@ -231,6 +240,11 @@
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
               <item name="Weixin" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="new_shop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="new_shop" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -293,18 +307,18 @@
       <updated>1556249697424</updated>
       <workItem from="1556249698714" duration="3824000" />
       <workItem from="1556256626171" duration="22216000" />
-      <workItem from="1556411262565" duration="32831000" />
+      <workItem from="1556411262565" duration="33082000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58871000" />
+    <option name="totallyTimeSpent" value="59122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18498659" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -615,13 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../1809/resources/views/weixin/detail.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
@@ -639,16 +646,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
-          <caret line="108" column="48" selection-start-line="108" selection-start-column="48" selection-end-line="108" selection-end-column="48" />
+          <caret line="146" column="66" selection-start-line="146" selection-start-column="66" selection-end-line="146" selection-end-column="66" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
             <element signature="e#1064#6185#0#PHP" />
             <element signature="e#6217#6790#0#PHP" />
             <element signature="e#6808#7040#0#PHP" />
-            <element signature="e#7045#7340#0#PHP" />
           </folding>
         </state>
       </provider>

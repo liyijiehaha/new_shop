@@ -33,4 +33,4 @@ Route::get('weixin/send','Weixin\WxController@send');
 //获取access_token
 Route::get('/TmpUser/getaccesstoken','Weixin\TmpUserController@getaccesstoken');
 Route::get('/TmpUser/tmper','Weixin\TmpUserController@tmper');
-Route::get('/goods/goodsdetail','Weixin\WxController@goodsdetail');
+Route::get('/goods/goodsdetail/','Weixin\WxController@goodsdetail');

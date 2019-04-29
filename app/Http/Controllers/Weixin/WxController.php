@@ -142,8 +142,9 @@ class WxController extends Controller
         $url='https://api.weixin.qq.com/cgi-bin/user/info?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
         return json_decode(file_get_contents($url),true);
     }
-    public function goodsdetail(){
-        $res=DB::table('shop_goods')->where(['goods_id'=>36])->first();
+    public function goodsdetail($goods_id){
+        $goods_id=$_GET($goods_id);
+        $res=DB::table('shop_goods')->where(['goods_id'=>$goods_id])->first();
         $data=[
             'res'=>$res,
             'code_url'=>"http://1809liyijie.comcto.com/goods/goodsdetail?goods_id=36"
