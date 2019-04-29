@@ -186,7 +186,7 @@ class WxController extends Controller
     //创建微二级菜单
     public function create_menu(){
         $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->getaccesstoken();
-        $redirect_uri = urlencode('http://1809liyijie.comcto.com/weixin/sign');  //授权后跳转的地址
+        $redirect_uri = urlencode('http://1809liyijie.comcto.com/weixin/sign2');  //授权后跳转的地址
         $arr=[
             'button'=>[
                 [
