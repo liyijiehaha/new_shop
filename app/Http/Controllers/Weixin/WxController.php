@@ -86,7 +86,7 @@ class WxController extends Controller
                           <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
                           <FromUserName><![CDATA[' . $app . ']]></FromUserName>
                           <CreateTime>' . time() . '</CreateTime>
-                          <MsgType><![CDATA[搜索商品]]></MsgType>      
+                          <MsgType><![CDATA[news]]></MsgType>      
                           <ArticleCount>1</ArticleCount>
                           <Articles>
                             <item>
@@ -106,7 +106,7 @@ class WxController extends Controller
                           <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
                           <FromUserName><![CDATA[' . $app . ']]></FromUserName>
                           <CreateTime>' . time() . '</CreateTime>
-                          <MsgType><![CDATA[随机搜索]]></MsgType>      
+                          <MsgType><![CDATA[news]]></MsgType>      
                           <ArticleCount>1</ArticleCount>
                           <Articles>
                             <item>
