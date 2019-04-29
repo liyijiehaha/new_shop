@@ -102,7 +102,6 @@ class WxController extends Controller
               $response1=json_encode($response);
               $arr=json_decode($response1,true);
               $res=$arr[0];
-              var_dump($res);
               echo  '<xml>
                           <ToUserName><![CDATA[' . $openid . ']]></ToUserName>
                           <FromUserName><![CDATA[' . $app . ']]></FromUserName>
@@ -113,7 +112,7 @@ class WxController extends Controller
                             <item>
                               <Title><![CDATA['.$res['goods_name'].']]></Title>
                               <Description><![CDATA[' . $res['goods_name']. ']]></Description>
-                              <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/$res[\'goods_img\']' . ']]></PicUrl>
+                              <PicUrl><![CDATA[' . 'http://1809liyijie.comcto.com/uploads/goodsImg/'.$res['goods_img'].']]></PicUrl>
                               <Url><![CDATA[' . 'http://1809liyijie.comcto.com/goods/goodsdetail/' . $res['goods_id'] . ']]></Url>
                             </item>
                           </Articles>
