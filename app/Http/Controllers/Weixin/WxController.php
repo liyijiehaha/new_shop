@@ -118,6 +118,39 @@ class WxController extends Controller
                           </Articles>
                      </xml>';
           }
+        }elseif($type=='voice'){
+            $media_id=$data->MediaId;
+            $url='https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->getaccesstoken().'&media_id='.$media_id;
+            $arm=file_get_contents($url);
+            $file_name=time().mt_rand(1111,9999).'.amr';//文件名
+            $arr=file_put_contents('wx/voice/'.$file_name,$arm);
+            $voice='wx/voice/'.$file_name;
+            $info=[
+                'voice'=>$voice,
+                'openid'=>$openid,
+                'create_time'=>$create_time
+            ];
+            $res=DB::table('wx_material')->insertGetId($info);
+
+
+        }elseif($type=='image'){
+            $media_id=$data->MediaId;
+            $url='https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->getaccesstoken().'&media_id='.$media_id;
+            $response = $client->get($url);
+            //获取响应头信息
+            $headers= $response->getHeaders();
+            $file_info= $headers['Content-disposition'][0];//获取文件名
+            $file_name=rtrim(substr($file_info,-20),'"');
+            $new_file_name=substr(md5(time().mt_rand(1111,9999)),10,8).'_'.$file_name;
+            $arr=Storage::put('wx/img'.$new_file_name,$response->getBody());
+            $img='public/wx/img'.$new_file_name;
+            $info=[
+                'img'=>$img,
+                'openid'=>$openid,
+                'create_time'=>$create_time
+            ];
+            $res=DB::table('wx_material')->insertGetId($info);
+
         }
     }
     //获取access_token

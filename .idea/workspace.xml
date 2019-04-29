@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ea150b6-35cb-4ef4-afc3-5481b84b5e4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,16 +36,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+            <state relative-caret-position="607">
+              <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
               <folding>
                 <element signature="e#45#71#0#PHP" expanded="true" />
                 <element signature="e#357#417#0#PHP" />
-                <element signature="e#433#6190#0#PHP" />
+                <element signature="e#1064#6184#0#PHP" />
+                <element signature="e#3784#6184#0#PHP" />
                 <element signature="e#6216#6789#0#PHP" />
                 <element signature="e#6807#7039#0#PHP" />
                 <element signature="e#7044#7396#0#PHP" />
+                <element signature="e#7415#8313#0#PHP" />
                 <element signature="e#8335#8387#0#PHP" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../1809/app/Http/Controllers/WxController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+              <folding>
+                <element signature="e#961#5667#0#PHP" />
+                <element signature="e#5699#6262#0#PHP" />
+                <element signature="e#6280#6548#0#PHP" />
+                <element signature="e#6567#7429#0#PHP" />
+                <element signature="e#7455#7989#0#PHP" />
+                <element signature="e#7994#8367#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -311,12 +331,12 @@
       <workItem from="1556256626171" duration="22216000" />
       <workItem from="1556411262565" duration="33450000" />
       <workItem from="1556519491251" duration="1108000" />
-      <workItem from="1556520919120" duration="4038000" />
+      <workItem from="1556520919120" duration="4301000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64636000" />
+    <option name="totallyTimeSpent" value="64899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
@@ -615,22 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../1809/app/Http/Controllers/WxController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-          <folding>
-            <element signature="e#283#343#0#PHP" />
-            <element signature="e#359#5673#0#PHP" />
-            <element signature="e#5699#6262#0#PHP" />
-            <element signature="e#6280#6548#0#PHP" />
-            <element signature="e#6567#7429#0#PHP" />
-            <element signature="e#7455#7989#0#PHP" />
-            <element signature="e#7994#8367#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/www/new_shop/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-336">
@@ -702,17 +706,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../1809/app/Http/Controllers/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="61" column="39" lean-forward="true" selection-start-line="61" selection-start-column="39" selection-end-line="61" selection-end-column="39" />
+          <folding>
+            <element signature="e#961#5667#0#PHP" />
+            <element signature="e#5699#6262#0#PHP" />
+            <element signature="e#6280#6548#0#PHP" />
+            <element signature="e#6567#7429#0#PHP" />
+            <element signature="e#7455#7989#0#PHP" />
+            <element signature="e#7994#8367#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="166" column="33" lean-forward="true" selection-start-line="166" selection-start-column="33" selection-end-line="166" selection-end-column="33" />
+        <state relative-caret-position="607">
+          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
           <folding>
             <element signature="e#45#71#0#PHP" expanded="true" />
             <element signature="e#357#417#0#PHP" />
-            <element signature="e#433#6190#0#PHP" />
+            <element signature="e#1064#6184#0#PHP" />
+            <element signature="e#3784#6184#0#PHP" />
             <element signature="e#6216#6789#0#PHP" />
             <element signature="e#6807#7039#0#PHP" />
             <element signature="e#7044#7396#0#PHP" />
+            <element signature="e#7415#8313#0#PHP" />
             <element signature="e#8335#8387#0#PHP" />
           </folding>
         </state>
