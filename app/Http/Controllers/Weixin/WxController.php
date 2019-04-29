@@ -242,8 +242,8 @@ class WxController extends Controller
         }
 
     }
-    public function sign(){
-
+    public function sign2(){
+        return '123456';
     }
     /*根据openid消息群发*/
 //    public function sendMsg($openid_arr,$content){
