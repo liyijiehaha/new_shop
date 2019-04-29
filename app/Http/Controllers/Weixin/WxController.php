@@ -131,8 +131,6 @@ class WxController extends Controller
                 'create_time'=>$create_time
             ];
             $res=DB::table('wx_material')->insertGetId($info);
-
-
         }elseif($type=='image'){
             $media_id=$data->MediaId;
             $url='https://api.weixin.qq.com/cgi-bin/media/get?access_token='.$this->getaccesstoken().'&media_id='.$media_id;
@@ -188,6 +186,7 @@ class WxController extends Controller
     //创建微二级菜单
     public function create_menu(){
         $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->getaccesstoken();
+        $redirect_uri = urlencode('http://1809liyijie.comcto.com/weixin/sign');  //授权后跳转的地址
         $arr=[
             'button'=>[
                 [
@@ -198,7 +197,7 @@ class WxController extends Controller
                 [
                     'type'=>'view',
                     'name'=>'签到',
-                    'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fweixin%2Fgetu&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
+                    'url'=>'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri='.$redirect_uri.'&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect'
                 ],
             ]
         ];
@@ -214,6 +213,37 @@ class WxController extends Controller
         }else{
             echo "创建菜单成功";
         }
+    }
+    public function getu(){
+        $code = $_GET['code'];
+        //获取access_token
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET').'&code='.$code.'&grant_type=authorization_code';
+        $response = json_decode(file_get_contents($url),true);
+        $access_token = $response['access_token'];
+        $openid= $response['openid'];
+        //获取用户信息
+        $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
+        $response_user = json_decode(file_get_contents($urll),true);
+        $res =DB::table('p_sq_user')->where(['openid'=>$response_user['openid']])->first();
+        if($res==NULL){
+            $aa_info = [
+                'openid' => $response_user['openid'],
+                'nickname' => $response_user['nickname'],
+                'sex' => $response_user['sex'],
+                'headimgurl' => $response_user['headimgurl'],
+            ];
+            DB::table('p_sq_user')->insertGetId($aa_info);
+            header('Refresh:3;url=/goods/goodsdetail/9');
+           return "<h1>欢迎小可爱授权</h1>";
+        }else{
+            header('Refresh:3;url=/goods/goodsdetail/9');
+            return "<h1>欢迎小可爱回来</h1>";
+
+        }
+
+    }
+    public function sign(){
+
     }
     /*根据openid消息群发*/
 //    public function sendMsg($openid_arr,$content){
@@ -246,33 +276,4 @@ class WxController extends Controller
 //            echo '发送失败';
 //        }
 //    }
-    public function getu(){
-        $code = $_GET['code'];
-        //获取access_token
-        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET').'&code='.$code.'&grant_type=authorization_code';
-        $response = json_decode(file_get_contents($url),true);
-        $access_token = $response['access_token'];
-        $openid= $response['openid'];
-        //获取用户信息
-        $urll = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$access_token.'&openid='.$openid.'&lang=zh_CN';
-        $response_user = json_decode(file_get_contents($urll),true);
-        $res =DB::table('p_sq_user')->where(['openid'=>$response_user['openid']])->first();
-        if($res==NULL){
-            $aa_info = [
-                'openid' => $response_user['openid'],
-                'nickname' => $response_user['nickname'],
-                'sex' => $response_user['sex'],
-                'headimgurl' => $response_user['headimgurl'],
-            ];
-            DB::table('p_sq_user')->insertGetId($aa_info);
-            header('Refresh:3;url=/goods/goodsdetail/9');
-           return "<h1>欢迎小可爱授权</h1>";
-        }else{
-            header('Refresh:3;url=/goods/goodsdetail/9');
-            return "<h1>欢迎小可爱回来</h1>";
-
-        }
-
-    }
-
 }

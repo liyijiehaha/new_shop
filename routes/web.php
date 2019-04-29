@@ -29,12 +29,11 @@ Route::get('/weixin/getaccesstoken','Weixin\WxController@getaccesstoken');
 Route::get('/weixin/create_menu','Weixin\WxController@create_menu');
 /*群发*/
 Route::get('weixin/send','Weixin\WxController@send');
-
+//网页授权
+Route::get('/weixin/getu', 'Weixin\WxController@getu');
+Route::get('/weixin/sign', 'Weixin\WxController@sign');
+Route::get('/weixin/sign2','Weixin\WxController@sign2');             //微信签到
 //获取access_token
 Route::get('/TmpUser/getaccesstoken','Weixin\TmpUserController@getaccesstoken');
 Route::get('/TmpUser/tmper','Weixin\TmpUserController@tmper');
 Route::get('/goods/goodsdetail/{goods_id?}','Weixin\WxController@goodsdetail');
-
-
-//网页授权
-Route::get('/weixin/getu', 'Weixin\WxController@getu');
