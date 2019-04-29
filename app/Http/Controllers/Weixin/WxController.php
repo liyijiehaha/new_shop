@@ -158,7 +158,7 @@ class WxController extends Controller
         $arr=[
             'button'=>[
                 [
-                    'type'=>'click',
+                    'type'=>'view',
                     'name'=>'最新福利',
                     'key'=> 'V1001_TODAY_TWLY',
                     'url'=>"https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxb6c09ceb8e8f8117&redirect_uri=http%3A%2F%2F1809liyijie.comcto.com%2Fwxweb%2Fu&response_type=code&scope=snsapi_userinfo &state=STATE#wechat_redirect
@@ -232,10 +232,9 @@ class WxController extends Controller
                 'nickname' => $response_user['nickname'],
                 'sex' => $response_user['sex'],
                 'headimgurl' => $response_user['headimgurl'],
-                'subscribe_time' => time()
             ];
             DB::table('wx_sq_user')->insertGetId($aa_info);
-            echo "<h1>你好你好你好</h1>";
+            echo "<h1>你好</h1>";
         }else{
             echo "<h1>回来啦</h1>";
 
