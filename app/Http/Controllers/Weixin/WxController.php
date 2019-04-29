@@ -229,7 +229,7 @@ class WxController extends Controller
                 'sex' => $response_user['sex'],
                 'headimgurl' => $response_user['headimgurl'],
             ];
-            DB::table('wx_sq_user')->insertGetId($aa_info);
+            DB::table('wx_sq_user')->insert($aa_info);
             echo "<h1>你好</h1>";
         }else{
             echo "<h1>回来啦</h1>";
