@@ -152,5 +152,62 @@ class WxController extends Controller
 
         return view('goods/goodsdetail',$data);
     }
+    //创建微二级菜单
+    public function create_menu(){
+        $url='https://api.weixin.qq.com/cgi-bin/menu/create?access_token='.$this->getaccesstoken();
+        $arr=[
+            'button'=>[
+                [
+                    'type'=>'click',
+                    'name'=>'最新福利',
+                    'key'=> 'V1001_TODAY_TWLY',
+                ],
+            ]
+        ];
+        $str=json_encode($arr,JSON_UNESCAPED_UNICODE);
+        $client=new Client();
+        $respons=$client->request('POST',$url,[
+            'body'=>$str
+        ]);
+        $ass=$respons->getBody();
+        $ar=json_decode($ass,true);
+        if($ar['errcode']>0){
+            echo "创建菜单失败";
+        }else{
+            echo "创建菜单成功";
+        }
+    }
+    /*根据openid消息群发*/
+    public function sendMsg($openid_arr,$content){
+        $msg=[
+            'touser'=>$openid_arr,
+            'msgtype'=>"text",
+            "text"=>[
+                "content"=> $content
+            ]
+        ];
+        $data=json_encode($msg,JSON_UNESCAPED_UNICODE);
+        $url='https://api.weixin.qq.com/cgi-bin/message/mass/send?access_token='.$this->getaccesstoken();
+        $client=new Client();
+        $response=$client->request('post',$url,[
+            'body'=>$data
+        ]);
+        return  $response->getBody();
+    }
+    public function send(){
+        $where=[
+            'status'=>1
+        ];
+        $userlist = DB::table('wx_user')->where($where)->get()->toArray();
+        $openid_arr=array_column($userlist,'openid');
+        $msg="李依杰可耐";
+        $res =$this->sendmsg($openid_arr,$msg);
+        if($res){
+            echo '发送成功';
+        }else{
+            echo '发送失败';
+        }
+    }
+
 
 }
