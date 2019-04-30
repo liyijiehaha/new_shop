@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redis;
 
-class Weixincontroller extends Controller
+class WeixinController extends Controller
 {
     public function getaccesstoken(){
         $key='wx_assess_token';
