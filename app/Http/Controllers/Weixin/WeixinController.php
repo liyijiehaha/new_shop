@@ -49,14 +49,14 @@ class WeixinController extends Controller
             ];
             DB::table('p_sq_user')->insertGetId($aa_info);
             echo "<h1>欢迎授权</h1>";
+        }else{
+            echo "<h1>欢迎回来</h1>";
             $url='https://api.weixin.qq.com/cgi-bin/tags/create?access_token='.$this->getaccesstoken();
             $data=[
-                    "openid"=>$openid,
-                    "remark"=>"Jhon"
-                ];
+                "openid"=>$openid,
+                "remark"=>"Jhon"
+            ];
             var_dump($data);
-        }else{
-            return "<h1>欢迎回来</h1>";
         }
     }
 }
