@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ea150b6-35cb-4ef4-afc3-5481b84b5e4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,33 +34,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="75" column="98" selection-start-line="75" selection-start-column="98" selection-end-line="75" selection-end-column="98" />
+            <state relative-caret-position="383">
+              <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
               <folding>
-                <element signature="e#45#71#0#PHP" expanded="true" />
-                <element signature="e#357#417#0#PHP" />
-                <element signature="e#6184#6804#0#PHP" />
-                <element signature="e#6216#6789#0#PHP" />
-                <element signature="e#6807#7039#0#PHP" />
-                <element signature="e#7044#7396#0#PHP" />
-                <element signature="e#7415#8313#0#PHP" />
-                <element signature="e#9316#10581#0#PHP" />
-                <element signature="e#11467#11519#0#PHP" />
+                <element signature="e#473#503#1#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/Weixincontroller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+            <state relative-caret-position="364">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
               <folding>
-                <element signature="e#473#503#1#PHP" />
+                <element signature="e#47#75#0#PHP" expanded="true" />
+                <element signature="e#202#775#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -97,8 +92,9 @@
         <option value="$PROJECT_DIR$/app/Model/User2Model.php" />
         <option value="$PROJECT_DIR$/resources/views/goods/goodsdetail.blade..php" />
         <option value="$PROJECT_DIR$/resources/views/goods/goodsdetail.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Weixin/Weixincontroller.php" />
       </list>
     </option>
   </component>
@@ -200,10 +196,11 @@
       <path value="$PROJECT_DIR$/vendor/encore/laravel-admin" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="533" />
-    <option name="width" value="1394" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-232" />
+    <option name="y" value="427" />
+    <option name="width" value="1943" />
+    <option name="height" value="980" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -213,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -256,6 +252,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,18 +312,20 @@
       <workItem from="1556256626171" duration="22216000" />
       <workItem from="1556411262565" duration="33450000" />
       <workItem from="1556519491251" duration="1108000" />
-      <workItem from="1556520919120" duration="6189000" />
+      <workItem from="1556520919120" duration="7831000" />
+      <workItem from="1556533388862" duration="5000" />
+      <workItem from="1556583492512" duration="1856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66787000" />
+    <option name="totallyTimeSpent" value="70290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1494638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14745308" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -373,14 +372,18 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php</url>
+          <line>171</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="115" column="10" selection-start-line="115" selection-start-column="10" selection-end-line="115" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../shop/app/Admin/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -701,30 +704,41 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="216" column="2" selection-start-line="216" selection-start-column="2" selection-end-line="243" selection-end-column="5" />
+          <folding>
+            <element signature="e#45#71#0#PHP" expanded="true" />
+            <element signature="e#357#417#0#PHP" />
+            <element signature="e#433#7633#0#PHP" />
+            <element signature="e#7659#8232#0#PHP" />
+            <element signature="e#8250#8482#0#PHP" />
+            <element signature="e#8487#8839#0#PHP" />
+            <element signature="e#8858#10161#0#PHP" />
+            <element signature="e#10166#11435#0#PHP" />
+            <element signature="e#11440#12187#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="33" column="51" selection-start-line="33" selection-start-column="51" selection-end-line="33" selection-end-column="51" />
+        <state relative-caret-position="383">
+          <caret line="42" column="18" lean-forward="true" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
           <folding>
             <element signature="e#473#503#1#PHP" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/WxController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Weixin/Weixincontroller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="75" column="98" selection-start-line="75" selection-start-column="98" selection-end-line="75" selection-end-column="98" />
+        <state relative-caret-position="364">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding>
-            <element signature="e#45#71#0#PHP" expanded="true" />
-            <element signature="e#357#417#0#PHP" />
-            <element signature="e#6184#6804#0#PHP" />
-            <element signature="e#6216#6789#0#PHP" />
-            <element signature="e#6807#7039#0#PHP" />
-            <element signature="e#7044#7396#0#PHP" />
-            <element signature="e#7415#8313#0#PHP" />
-            <element signature="e#9316#10581#0#PHP" />
-            <element signature="e#11467#11519#0#PHP" />
+            <element signature="e#47#75#0#PHP" expanded="true" />
+            <element signature="e#202#775#0#PHP" />
           </folding>
         </state>
       </provider>

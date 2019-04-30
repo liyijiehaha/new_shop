@@ -36,3 +36,11 @@ Route::get('/weixin/sign','Weixin\WxController@sign');             //微信签�
 Route::get('/TmpUser/getaccesstoken','Weixin\TmpUserController@getaccesstoken');
 Route::get('/TmpUser/tmper','Weixin\TmpUserController@tmper');
 Route::get('/goods/goodsdetail/{goods_id?}','Weixin\WxController@goodsdetail');
+
+
+
+//考试
+/*获取access_token*/
+Route::get('/exam/getaccesstoken','Weixin\WeixinController@getaccesstoken');
+/*网页授权*/
+Route::get('/exam/getu', 'Weixin\WeixinController@getu');

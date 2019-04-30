@@ -243,7 +243,32 @@ class WxController extends Controller
 
     }
     public function sign(){
-        return '123456789';
+        $token_info = getJssdkAccessToken($_GET['code']);
+        $user_info = getJssdkUserInfo($token_info['access_token'],$token_info['openid']);
+        $res= DB::table('wx_user')->where(['openid'=>$user_info['openid']])->first();
+        if($res) {     //已存在
+            echo "用户已存在";
+            echo '<hr>';
+        }else{
+            $data = [
+                'openid'    => $user_info['openid'],
+                'add_time'    => time(),
+                'nickname'    => $user_info['nickname'],
+                'sex'    => $user_info['sex'],
+                'headimgurl'    => $user_info['headimgurl'],
+            ];
+            WxUserModel::insertGetId($data);
+            echo "生成新用户";echo '<hr>';
+        }
+    }
+    public  function getJssdkAccessToken($code){
+        $url = 'https://api.weixin.qq.com/sns/oauth2/access_token?appid='.env('WX_APPID').'&secret='.env('WX_APPSECRET').'&code='.$code.'&grant_type=authorization_code';
+        return json_decode(file_get_contents($url),true);
+    }
+    function getJssdkUserInfo($openid)
+    {
+        $url = 'https://api.weixin.qq.com/sns/userinfo?access_token='.$this->getaccesstoken().'&openid='.$openid.'&lang=zh_CN';
+        return json_decode(file_get_contents($url),true);
     }
     /*根据openid消息群发*/
 //    public function sendMsg($openid_arr,$content){
