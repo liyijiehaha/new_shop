@@ -54,12 +54,18 @@ class WeixinController extends Controller
         }
     }
     public function input(){
+        $client=new Client();
         $url='https://api.weixin.qq.com/cgi-bin/tags/create?access_token='.$this->getaccesstoken();
-        $data =[
-            "tag"=>[
-                "name" => "朋友"
+        $arr=[
+            'tag' => [
+                'tag'=>同学
             ]
         ];
-        var_dump($data);
+        $str=json_encode($arr,JSON_UNESCAPED_UNICODE);
+        $response=$client->request('POST',$url,[
+            'body'=>$str
+        ]);
+        echo $response->getBody();
+
     }
 }
