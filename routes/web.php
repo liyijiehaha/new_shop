@@ -44,3 +44,4 @@ Route::get('/goods/goodsdetail/{goods_id?}','Weixin\WxController@goodsdetail');
 Route::get('/exam/getaccesstoken','Weixin\WeixinController@getaccesstoken');
 /*网页授权*/
 Route::get('/exam/getu', 'Weixin\WeixinController@getu');
+Route::post('/exam/input', 'Weixin\WeixinController@input');
