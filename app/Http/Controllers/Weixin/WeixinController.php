@@ -51,12 +51,15 @@ class WeixinController extends Controller
             echo "<h1>欢迎授权</h1>";
         }else{
             echo "<h1>欢迎回来</h1>";
-            $url='https://api.weixin.qq.com/cgi-bin/tags/create?access_token='.$this->getaccesstoken();
-            $data=[
-                "openid"=>$openid,
-                "remark"=>"Jhon"
-            ];
-            var_dump($data);
         }
+    }
+    public function input(){
+        $url='https://api.weixin.qq.com/cgi-bin/tags/create?access_token='.$this->getaccesstoken();
+        $data =[
+            "tag"=>[
+                "name" => "朋友"
+            ]
+        ];
+        var_dump($data);
     }
 }
